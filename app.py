@@ -12,7 +12,6 @@ def about():
 
     return render_template('about.html')
 
-
 @app.route("/")
 def main():
 
