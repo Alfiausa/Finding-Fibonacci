@@ -1,2 +1,2 @@
-# Finding-Fibonacci
-Final Project "Finding Fibonacci" Golden Ration application in Art and Finance
+ShellLearn
+Final Project "ShellLearn" - interactive dashboard for kids to learn letters and numbers.
