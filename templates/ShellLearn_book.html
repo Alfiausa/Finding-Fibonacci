@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PROJECT</title>
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../static/js/painterro-0.2.68.min.js"></script>
+
+    <!-- CSS -->	
+    <style type="text/css">
+    html, 
+    body {
+        margin-bottom: 50px;
+        height: 100%;
+    }
+
+    body {
+    background-color: #1aa9bc; /* Green */
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+    
+    }
+
+    #btnABC {
+        font-size: 56px;
+        color:blue;
+    }
+ 
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#" style="color:teal;">ShellLearn</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 style="text-align: center; color:red"> WHAT WILL YOU LEARN TODAY? </h1>
+        <br> <br> <br>
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="row">
+                    <!-- <form action="/level1ABC" method="POST" > -->
+                        <button id="btnABC" onclick='ptro.show()' type="submit" class="btn btn-primary btn-block" style="background-color:yellow;">ABC</button>
+                    <!-- </form> -->
+                </div>                    
+            </div>
+            <div class="col-sm-2" >
+                <p></p>
+            </div>
+            <div class="col-sm-5">
+                <div class="row">
+                    <!-- <form action="/level1Numbers" method="POST" > -->
+                        <button id="btnABC" onclick='ptro.show()' type="submit" class="btn btn-primary btn-block" style="background-color:yellow;">1, 2, 3</button>
+                    <!-- </form> -->
+                </div>  
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="row">
+                        <div class="centered">
+                                
+                        </div>
+                </div>                    
+            </div>
+            <div class="col-sm-2" >
+                <p></p>
+            </div>
+            <div class="col-sm-5">
+                <div class="row">
+                    
+                </div>  
+            </div>
+        </div>
+    </div>
+
+    <div>
+        {% for f in files %}
+        <div class="img-browse">
+            <a href="/image/{{f}}"><img src="/image/{{f}}"/></a>
+        </div>
+        {% endfor %}
+    </div>
+    <style>
+        .img-browse {
+            width: 600px;
+            border: 1px solid gray;
+            padding: 10px;
+            margin: 10px;
+        }
+        .img-browse img {
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        var ptro = Painterro({
+            saveHandler: function (image, done) {
+                var xhr = new XMLHttpRequest()
+                xhr.open('POST', 'http://127.0.0.1:5000/save-as-base64/')
+                xhr.setRequestHeader('Content-Type', 'application/json')
+                xhr.send(JSON.stringify({
+                    image: image.asDataURL('image/png')
+                }))
+                xhr.onload = function (e) {
+                    done(true)
+                    window.location.reload()
+                }
+            }
+        })
+    </script> 
+    
+    
+      
+
+<!-- <img src="../static/img/mayagabeira15.jpg" alt="surfing" width="1500" height="1000"> -->
+
+   
+</body>
+</html>
