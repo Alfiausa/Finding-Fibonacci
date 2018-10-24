@@ -25,10 +25,10 @@ def load_model(Choice):
     print(Choice)
     if (Choice == "Alpha"):
         K.clear_session()
-        model = keras.models.load_model("eminst_letters_dense_model.h5")
+        model = keras.models.load_model("emnist\eminst_letters_dense_model.h5")
     elif (Choice == "Num"):  
         K.clear_session() 
-        model = keras.models.load_model("eminst_digits_dense_model.h5")   
+        model = keras.models.load_model("emnist\eminst_digits_dense_model.h5")   
     graph = K.get_session().graph
 
 def ascii_map():
