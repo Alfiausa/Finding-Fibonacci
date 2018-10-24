@@ -11,9 +11,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
   body {
-      font: 20px Montserrat, sans-serif;
+      font: Helvetica,Arial,sans-serif;
       line-height: 1.8;
-      color: #f5f6f7;
+      color: rgb(250, 247, 84);
   }
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
@@ -47,7 +47,12 @@
       letter-spacing: 5px;
   }
   .navbar-nav  li a:hover {
+      font: Helvetica,Arial,sans-serif;
       color: #1abc9c !important;
+  }
+
+  .navbar-brand {
+    color: rgb(250, 247, 84);
   }
   </style>
 </head>
@@ -62,13 +67,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Shell Learn - About Us</a>
+      <a class="navbar-brand" href="#" style="color:teal;">ShellLearn - About Us</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">WHO</a></li>
-        <li><a href="#">WHAT</a></li>
-        <li><a href="#">WHERE</a></li>
+      <ul class="nav navbar-nav navbar-right" style="color:teal;">
+        <li><a href="#" style="color:teal;" Helvetica,Arial,sans-serif >WHO</a></li>
+        <li><a href="#" style="color:teal;" >WHAT</a></li>
+        <li><a href="#" style="color:teal;" >WHERE</a></li>
       </ul>
     </div>
   </div>
@@ -77,17 +82,20 @@
 <!-- First Container -->
 <div class="container-fluid bg-1 text-center">
   <h3 class="margin">Who Are We?</h3>
-  <img src="../images/Shell_Learn.jpg" class="img-responsive img-square margin" style="display:inline" alt="Shell" width="350" height="350">
-  <h3>Shell Learn is the final project for our Data Science and Visualization Boot Camp through Rutgers University.</h3>
+  <img src="../static/img/Shell_Learn.jpg" class="img-responsive img-square margin" style="display:inline" alt="Shell" width="350" height="350">
+  <h3>ShellLearn is the final project for our Data Science and Visualization Boot Camp through Rutgers University.</h3>
 </div>
 
 <!-- Second Container -->
 <div class="container-fluid bg-2 text-center">
   <h3 class="margin">What is it?</h3>
-  <p>Shell Learn is an interactive learning tool that evaluates a child's writing skills using a trained computer model.  Users can use the Panterro App to write letters and numbers, our model will evaluate their try and record meaningful data on their improvement. </p>
-  <a href="#" class="btn btn-default btn-lg">
+  <p>ShellLearn is an interactive learning tool that evaluates a child's writing skills using a trained computer model.  Users can use the Panterro App to write letters and numbers, our model will evaluate their try and record meaningful data on their improvement. </p>
+  <!-- <a href="#" class="btn btn-default btn-lg">
     <span class="glyphicon glyphicon-ok"></span> Try it now!
-  </a>
+  </a> -->
+  <form action="/ShellLearn_book" method="POST">
+      <input class="btn btn-default btn-lg" type="submit" value="Try it Now!">
+  </form>
 </div>
 
 <!-- Third Container (Grid) -->
@@ -97,19 +105,19 @@
   <div class="row">
     <div class="col-sm-3">
       <p>Alfia Fahrutdinova</p>
-      <img src="../images/members/afahrutdinova.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <img src="../static/img/members/afahrutdinova.jpg" class="img-responsive margin" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-3"> 
       <p>Saswati Mahapatra</p>
-      <img src="../images/members/smahapatra.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <img src="../static/img/members/smahapatra.jpg" class="img-responsive margin" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-3"> 
       <p>Pragati (Soni) Mehta</p>
-      <img src="../images/members/pmehta.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <img src="../static/img/members/pmehta.jpg" class="img-responsive margin" style="width:100%" alt="Image">
     </div>
     <div class="col-sm-3"> 
       <p>Jill Stratton</p>
-      <img src="../images/members/jstratton.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <img src="../static/img/members/jstratton.jpg" class="img-responsive margin" style="width:100%" alt="Image">
     </div>
   </div>
 </div>
