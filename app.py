@@ -74,7 +74,7 @@ def login():
             password = request.form['password']
             return redirect(url_for('about'))
     return render_template('login.html', error=error)
-
+ 
 @app.route('/ShellLearn_book', methods=['GET', 'POST'])
 def level1ABC():
     # if userID != 'none' :
@@ -167,4 +167,4 @@ def Numbers():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

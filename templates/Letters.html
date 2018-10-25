@@ -65,19 +65,19 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="ShellLearn_book.html">Home</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="Letters.html">Letters</a></li>
-            <li><a href="numbers.html">Numbers</a></li>
-            <li><a href="ShellLearn_About.html">About</a></li>
+          <li><a href="/ShellLearn_book">Home</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/letters">Letters</a></li>
+          <li><a href="/numbers">Numbers</a></li>
+          <li><a href="/about">About</a></li>
         </ul>
       </div>
     </div>
   </nav>
       <!-- END Navbar --> 
       <div class="row">
-      <div class="col-sm-12"><h2><p class="text-center"></p>Directions:  Practice the Letter in the picture</p></h2></div>
-    </div>
+        <div class="col-sm-12"><h2><p class="text-center"></p>Directions:  Practice the Letter in the picture</p></h2></div>
+      </div>
     <div class="row">
       <div class="col-sm-6">
     
@@ -99,7 +99,11 @@
                     // alert("Prediction:  - "+obj.prediction+" - \n \nSuccess:  "+obj.success);
                     alert("Prediction:  - "+obj.prediction);
                 }
-            }
+
+            },
+            defaultTool: "brush",
+            // fontStrokeSize: 90
+            defaultLineWidth: 20
         })
         ptro.show()
       </script>
