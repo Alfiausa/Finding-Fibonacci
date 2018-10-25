@@ -1,3 +1,5 @@
+https://machinelearningmastery.com/when-to-use-mlp-cnn-and-rnn-neural-networks/
+
 https://keras.io/getting-started/sequential-model-guide/
 https://keras.io/layers/convolutional/
 https://keras.io/layers/pooling/
