@@ -22,6 +22,14 @@
     background-repeat: no-repeat; 
     background-size: 100% 100%;
     }
+    #btnABC {
+        font-size: 56px;
+        color:blue;
+    }
+    #btn123 {
+        font-size: 56px;
+        color:blue;
+    }
     </style>
 </head>
 <body>
@@ -34,7 +42,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>                        
             </button>
-            <a class="navbar-brand" href="ShellLearn_book.html">SheLLLearn Home</a>
+            <a class="navbar-brand" href="#">SheLLLearn - Letters</a>
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
@@ -48,15 +56,15 @@
         </div>
       </nav>
           <!-- END Navbar -->
-          <div class="row"><h1 style="text-align: center; color:rgb(16, 15, 58)"> <i>What shall you learn today? </i></h1></div>
+    <div class="container">
+        <h1 style="text-align: center; color:red"> WHAT WILL YOU LEARN TODAY? </h1>
         <br> <br> <br>
-
         <div class="row">
             <div class="col-sm-5">
                 <div class="row">
-                    <a href="Letters.html">
-                        <img src="../static/img/ABCButton.png" alt="ABC's" style="width:500px;height:500px;border:0;">
-                    </a>
+                    <form action="/letters" method="POST">
+                        <input id="btnABC" type="submit" class="btn btn-primary btn-block" style="background-color:yellow;" value="ABC">
+                    </form>
                 </div>                    
             </div>
             <div class="col-sm-2" >
@@ -64,9 +72,9 @@
             </div>
             <div class="col-sm-5">
                 <div class="row">
-                        <a href="numbers.html">
-                            <img src="../static/img/123Button.png" alt="123's" style="width:500px;height:500px;border:0;">
-                        </a>
+                    <form action="/numbers" method="POST">
+                        <input id="btn123" type="submit" class="btn btn-primary btn-block" style="background-color:yellow;" value="1,2,3">
+                    </form>
                 </div>  
             </div>
         </div>

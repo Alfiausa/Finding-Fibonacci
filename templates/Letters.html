@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Letters</title>
+    <title>SheLLLearn Letters</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,8 +13,9 @@
     <style>
     body {
         font: 20px Montserrat, sans-serif;
-        line-height: 1.8;
-        color: #f5f6f7;
+        line-height: 2;
+        color: #000000;
+       
     }
     p {font-size: 16px;}
     .margin {margin-bottom: 45px;}
@@ -60,30 +61,27 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>                        
         </button>
-        <a class="navbar-brand" href="#">Shell Learn - Letters</a>
+        <a class="navbar-brand" href="#">SheLLLearn - Letters</a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Letters</a></li>
-          <li><a href="#">Numbers</a></li>
-          <li><a href="#">About</a></li>
+            <li><a href="ShellLearn_book.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="Letters.html">Letters</a></li>
+            <li><a href="numbers.html">Numbers</a></li>
+            <li><a href="ShellLearn_About.html">About</a></li>
         </ul>
       </div>
     </div>
   </nav>
-      <!-- END Navbar -->
-  <div class="container">
+      <!-- END Navbar --> 
+      <div class="row">
+      <div class="col-sm-12"><h2><p class="text-center"></p>Directions:  Practice the Letter in the picture</p></h2></div>
+    </div>
     <div class="row">
       <div class="col-sm-6">
-        <!-- <script src="random_upper.js"></script> -->
-      </div>
-      <div class="row">
-        <div class="col-sm-6">
-        </div>
-      </div>
-    </div>
-  </div>
+    
+        <!-- Start Painterro -->
     <script>
         var ptro = Painterro({
             saveHandler: function (image, done) {
@@ -104,7 +102,13 @@
             }
         })
         ptro.show()
-
+      </script>
+        <!-- End Painterro -->
+        <!-- Begin Randomizer-->
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+      <script>
         function random_upper(){
         var UpperLetterCards=new Array()
         //specify random images below. You can have as many as you wish
@@ -138,9 +142,14 @@
         var ry=Math.floor(Math.random()*UpperLetterCards.length)
         if (ry==0)
         ry=1
-        document.write('<img src="../static/img/upperlettercards/'+UpperLetterCards[ry]+'" border=0, height=300 float: right;>')
+        document.write('<img src="../static/img/upperlettercards/'+UpperLetterCards[ry]+'" border=0, height=500 float: center;>')
         }
         random_upper()
     </script>
+    <!-- End Randomizer -->
+    </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

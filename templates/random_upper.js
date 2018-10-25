@@ -32,6 +32,6 @@ UpperLetterCards[25] = 'CapitalZ.png'
 var ry=Math.floor(Math.random()*UpperLetterCards.length)
 if (ry==0)
 ry=1
-document.write('<img src="../Images/upperlettercards/'+UpperLetterCards[ry]+'" border=0, height=300>')
+document.write('<img src="../Images/upperlettercards/'+UpperLetterCards[ry]+'" border=0, class="img-responsive"')
 }
 random_upper()
